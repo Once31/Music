@@ -1,15 +1,16 @@
 {
-  "name": "rock-paper-scissors",
+  "name": "Music player",
   "version": "1.0.0",
-  "description": "A simple \"Rock Paper Scissors\" game with hand gesture detection",
+  "description": "Play/Pause Music with hand gesture",
   "main": "index.js",
-  "author": "Andreas Schallwig",
-  "license": "MIT",
+  "author": "Ajay Chavan",
+  "license": "",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint . src config || true",
-    "prettify": "prettier --write 'src/**/*.js'"
+    "prettify": "prettier --write 'src/**/*.js'",
+    "dev": "cross-env NODE_ENV=development webpack nodemon --config config/webpack.dev.js"
   },
   "keywords": [
     "Handpose",
@@ -41,6 +42,7 @@
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.4.2",
     "node-sass": "^6.0.1",
+    "nodemon": "^2.0.20",
     "postcss-loader": "^6.2.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",

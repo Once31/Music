@@ -8,7 +8,7 @@ import '@tensorflow/tfjs-backend-webgl';
 
 // import the FingerPose gesture estimator + our predefined gestures
 import { GestureEstimator } from 'fingerpose';
-import { RockGesture, PaperGesture, ScissorsGesture } from './Gestures';
+import { RaisedFistGesture, RaisedHandGesture, VictoryGesture } from './Gestures';
 
 // import a sample (dummy) image used to warm up the model
 import { SampleImage } from './SampleImage';
@@ -21,7 +21,7 @@ export const Prediction = {
     init: async function() {
 
         // initialize finger gesture recognizer with known gestures
-        const knownGestures = [RockGesture, PaperGesture, ScissorsGesture];
+        const knownGestures = [RaisedFistGesture, RaisedHandGesture, VictoryGesture];
         gestureEstimator = new GestureEstimator(knownGestures);
         console.log('Initialized FingerPose with ' + knownGestures.length + ' gestures');
 

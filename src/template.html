@@ -9,19 +9,24 @@
   </head>
 
   <body>
+    <nav>
+      
+      <button><a href="Music.html">Music</a></button>
+      <button><a href="index.html">Game</a></button>
+    </nav>
     <div id="root">
 
-      <h1 class="ff-8bit">Let's play Rock ✊ Paper 🤚 Scissors ✌</h1>
+      <h1 class="ff-8bit">Music Operator using Hand Gesture</h1>
 
-      <p class="instructions">After the countdown, show a hand gesture and hold it for a moment.<br>
-        The computer will then make its move (don't worry, it doesn't cheat).</p>
+      <p class="instructions">After the countdown, show a hand gesture and hold it for a moment.
+        </p>
 
       <div class="game-container">
 
         <div class="player">
           <h2 class="player-headline">
-            <span class="nick">Human</span>
-            <span class="score" id="score1">0</span>
+            <span class="nick">Camara</span>
+            <span class="score" hidden id="score1">0</span>
           </h2>
           <div class="player-container">
 
@@ -48,17 +53,20 @@
 
         <div class="player">
           <h2 class="player-headline">
-            <span class="nick">Robot</span>
-            <span class="score" id="score2">0</span>
+            <span class="nick">Music Player</span>
+            <span class="score" hidden id="score2">0</span>
           </h2>
           <div class="robot-container">
-            <img id="robot" class="avatar" src="assets/robot.gif" alt="">
-            <img id="robot-hand" class="robot-hand" alt="">
+           
+            <audio id="play" controls>
+              <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3" />
+            </audio>
+            <img id="robot-hand" hidden class="robot-hand" alt="">
           </div>
         </div>
 
         <div class="messages">
-          <span id="message" class="message-text message-fadeInOut"></span>
+          <span id="message"  class="message-text message-fadeInOut"></span>
         </div>
 
       </div>

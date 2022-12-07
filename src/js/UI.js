@@ -1,11 +1,14 @@
-const $playerScore = document.querySelector('#score1');
+// const $playerScore = document.querySelector('#score1');
 const $playerVideo = document.querySelector('#player-video');
 const $playerHand = document.querySelector('#player-hand');
 
-const $robotScore = document.querySelector('#score2');
+// const $robotScore = document.querySelector('#score2');
 const $robotImage = document.querySelector('#robot'); 
 const $robotHand = document.querySelector('#robot-hand');
 
+const play = document.querySelector('#play')
+
+console.log(play)
 const $statusText = document.querySelector('#message');
 
 const $timerRing = document.querySelector('#timer-ring');
@@ -22,9 +25,10 @@ export const UI = {
         this.showTimer(false);
 
         // preload some images
-        (new Image()).src = "assets/rock.png";
-        (new Image()).src = "assets/paper.png";
-        (new Image()).src = "assets/scissors.png";
+        
+        (new Image()).src = "assets/raised_fist.png";
+        (new Image()).src = "assets/raised_hand.png";
+        (new Image()).src = "assets/victory.png";
     },
 
     initTimerCircle: function() {
@@ -63,9 +67,9 @@ export const UI = {
 
     setPlayerHand: function(gesture) {
         switch(gesture) {
-            case 'rock': $playerHand.textContent = "✊"; break;
-            case 'paper': $playerHand.textContent = "🤚"; break;
-            case 'scissors': $playerHand.textContent = "✌"; break;
+            case 'RaisedFist': $playerHand.textContent = "✊";play.pause(); break;
+            case 'RaisedHand': $playerHand.textContent = "🤚";play.play(); break;
+            case 'Victory': $playerHand.textContent = "✌"; break;
             default: $playerHand.textContent = ""; break;
         }
     },
@@ -95,9 +99,9 @@ export const UI = {
 
     setRobotGesture: function(gesture) {
         switch(gesture) {
-            case 'rock': $robotHand.src = "assets/rock.png"; break;
-            case 'paper': $robotHand.src = "assets/paper.png"; break;
-            case 'scissors': $robotHand.src = "assets/scissors.png"; break;
+            case 'RaisedFist': $robotHand.src = "assets/raised_fist.png";  break;
+            case 'RaisedHand': $robotHand.src = "assets/raised_hand.png"; break;
+            case 'Victory': $robotHand.src = "assets/victory.png"; break;
             default: $robotHand.src = ""
         }
     },

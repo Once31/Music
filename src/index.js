@@ -71,7 +71,7 @@ function waitForPlayer() {
 async function playOneRound() {
 
     // show robot waiting for player
-    UI.showRobotImage(true);
+    // UI.showRobotImage(true);
 
     // hide the timer circle
     UI.showTimer(false);
@@ -139,10 +139,10 @@ function detectPlayerGesture(requiredDuration) {
                     UI.animatePlayerHand();
 
                     // let computer make its move
-                    const computerGesture = getRandomGesture();
+                    // const computerGesture = getRandomGesture();
 
                     // check the game result
-                    checkResult(playerGesture, computerGesture);
+                    // checkResult(playerGesture, computerGesture);
                 }
             });
     
@@ -155,10 +155,10 @@ function detectPlayerGesture(requiredDuration) {
 function checkResult(playerGesture, computerGesture) {
 
     let statusText;
-    let playerWins = false;
-    let computerWins = false;
+    // let playerWins = false;
+    // let computerWins = false;
 
-    if(playerGesture == computerGesture) {
+    /*if(playerGesture == computerGesture) {
         // draw
         statusText = "It's a draw!";
     }
@@ -191,24 +191,24 @@ function checkResult(playerGesture, computerGesture) {
                 statusText = "Rock beats scissors";
             }
         }
-    }
+    }*/
+ 
+    // if(playerWins) {
+    //     playerScore++;
+    //     statusText += " - You win!";
+    // }
+    // else if(computerWins) {
+    //     computerScore++;
+    //     statusText += " - The robot wins!";
+    // }
 
-    if(playerWins) {
-        playerScore++;
-        statusText += " - You win!";
-    }
-    else if(computerWins) {
-        computerScore++;
-        statusText += " - The robot wins!";
-    }
-
-    UI.showRobotHand(true);
-    UI.setRobotGesture(computerGesture);
+    // UI.showRobotHand(true);
+    // UI.setRobotGesture(computerGesture);
 
     UI.setStatusMessage(statusText);
 
-    UI.setPlayerScore(playerScore);
-    UI.setRobotScore(computerScore);
+    // UI.setPlayerScore(playerScore);
+    // UI.setRobotScore(computerScore);
 
     // wait for 3 seconds, then start next round
     setTimeout(playOneRound, 3000);
